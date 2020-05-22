@@ -18,7 +18,7 @@ Enjoy!
     * [Install & Dependencies](#install--dependencies)
     * [Running the API](#running-the-api)
     * [Running the Tests](#running-the-tests)
-* [Your Task](#your-task)
+* Task: [Logic](#logic)
     * [values-for-key.js](#values-for-keyjs)
     * [evolutions-of.js](#evolutions-ofjs)
     * [type-stats.js](#type-statsjs)
@@ -27,6 +27,7 @@ Enjoy!
     * [find-by/type.js](#find-by/typejs)
     * [find-by/value.js](#find-by/valuejs)
     * [find-by/weakness.js](#find-by/weaknessjs)
+* Task: [API](#api)
 * [Extra Challenge](#extra-challenge)
 * [Helpful Links](#helpful-links)
 * [Contributors](#contributors)
@@ -89,7 +90,7 @@ Test results will be logged to the terminal and rendered to the folder called `/
 
 ---
 
-## Your Task
+## Logic
 
 The good news is _almost_ all of the code is already written, and it already works!  All you need to write is the bodies for the 8 functions in `./logic`.  Each of the functions are used by the API to process the PokeDex data and return just the information a user needs.
 
@@ -170,6 +171,13 @@ Below are the 8 functions you need to write:
 
 ---
 
+## API
+
+Write the handlers!
+
+[TOP](#pokedex-api)
+
+---
 
 ## Helpful Links
 
