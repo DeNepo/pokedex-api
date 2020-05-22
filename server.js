@@ -7,8 +7,8 @@ const cors = require('cors');
 const morgan = require('morgan');
 const config = require('./config');
 
-const POKEDEX = require('./data/pokedex.json');
-const LOGIC = require("./logic");
+const pokedex = require('./data/pokedex.json');
+const logic = require("./logic");
 
 const app = express();
 
@@ -30,7 +30,7 @@ app.get("/", function (req, res) {
 });
 
 app.get('/all', (req, res) => {
-  res.json(POKEDEX);
+  res.json(pokedex);
 });
 
 
@@ -42,7 +42,7 @@ app.get('/values-for-key/:key', (req, res) => {
 
   // use the logic you wrote to process the pokedex data
   try {
-    const result = LOGIC.valuesForKey(POKEDEX, key);
+    const result = logic.valuesForKey(pokedex, key);
     console.log(result);
 
     // respond with the return value if there was no error
