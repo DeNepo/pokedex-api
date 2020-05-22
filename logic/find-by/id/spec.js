@@ -6,11 +6,11 @@ const dataSample1 = require('../../../data/samples/1.json');
 const dataSample2 = require('../../../data/samples/2.json');
 const dataSample3 = require('../../../data/samples/3.json');
 
-const testCases = [
-  {
-    name: 'id: data/samples/1.json, 13',
-    args: [dataSample1, 13],
-    expected: {
+describe("findById(pokeData, id) : returns the pokemon object with the given id", () => {
+
+  it(`data sample 1, 13`, () => {
+    const actual = findById(dataSample1, 13);
+    const expected = {
       "id": 13,
       "num": "013",
       "name": "Weedle",
@@ -41,17 +41,19 @@ const testCases = [
         { "num": "014", "name": "Kakuna" },
         { "num": "015", "name": "Beedrill" }
       ]
-    }
-  },
-  {
-    name: 'id: data/samples/1.json, 16',
-    args: [dataSample1, 16],
-    expected: null
-  },
-  {
-    name: 'id: data/samples/2.json, 46',
-    args: [dataSample2, 46],
-    expected: {
+    };
+    assert.deepStrictEqual(actual, expected);
+  });
+
+  it(`data sample 1, 16`, () => {
+    const actual = findById(dataSample1, 16);
+    const expected = null;
+    assert.deepStrictEqual(actual, expected);
+  });
+
+  it(`data sample 2, 46`, () => {
+    const actual = findById(dataSample2, 46);
+    const expected = {
       "id": 46,
       "num": "046",
       "name": "Paras",
@@ -85,17 +87,19 @@ const testCases = [
           "name": "Parasect"
         }
       ]
-    }
-  },
-  {
-    name: 'id: data/samples/2.json, 42',
-    args: [dataSample2, 42],
-    expected: null
-  },
-  {
-    name: 'id: data/samples/3.json, 84',
-    args: [dataSample3, 84],
-    expected: {
+    };
+    assert.deepStrictEqual(actual, expected);
+  });
+
+  it(`data sample 2, 42`, () => {
+    const actual = findById(dataSample2, 42);
+    const expected = null;
+    assert.deepStrictEqual(actual, expected);
+  });
+
+  it(`data sample 3, 84`, () => {
+    const actual = findById(dataSample3, 84);
+    const expected = {
       "id": 84,
       "num": "084",
       "name": "Doduo",
@@ -126,12 +130,13 @@ const testCases = [
           "name": "Dodrio"
         }
       ]
-    }
-  },
-  {
-    name: 'id: data/samples/3.json, 85',
-    args: [dataSample3, 85],
-    expected: {
+    };
+    assert.deepStrictEqual(actual, expected);
+  });
+
+  it(`data sample 3, 85`, () => {
+    const actual = findById(dataSample3, 85);
+    const expected = {
       "id": 85,
       "num": "085",
       "name": "Dodrio",
@@ -158,14 +163,8 @@ const testCases = [
           "name": "Doduo"
         }
       ]
-    }
-  }
-]
-
-describe("id(pokeData, id) -> returns the pokemon object with the given id, or an empty object: ", () => {
-  testCases.forEach(test => {
-    it(test.name, () => {
-      assert.deepStrictEqual(findById(...test.args), test.expected);
-    });
+    };
+    assert.deepStrictEqual(actual, expected);
   });
+
 });
