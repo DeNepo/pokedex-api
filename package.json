@@ -4,8 +4,8 @@
   "description": "a little app to practice fs, processing data, and testing api's",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js",
     "test": "mocha logic --recursive --reporter mochawesome"
   },
   "author": "",
@@ -16,6 +16,7 @@
     "lodash": "^4.17.15"
   },
   "devDependencies": {
+    "mocha": "8.0.1",
     "mochawesome": "^6.1.1",
     "morgan": "^1.10.0",
     "nodemon": "2.0.1"
